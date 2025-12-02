@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #121821;
+  color: #e0e0e0;
+}
+
+header {
+  background: #0d47a1;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+.card {
+  background: #1c2430;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.scan-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.scan-block {
+  flex: 1 1 280px;
+}
+
+input[type="file"],
+input[type="url"] {
+  width: 100%;
+  margin: 0.5rem 0 0.75rem;
+}
+
+input[type="url"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #546e7a;
+  background: #151b24;
+  color: #e0e0e0;
+}
+
+input[type="url"]::placeholder {
+  color: #78909c;
+}
+
+.button-primary {
+  background: #1e88e5;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background: #1565c0;
+}
+
+.button-secondary {
+  background: #263238;
+  border: 1px solid #546e7a;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.button-secondary:hover {
+  background: #37474f;
+}
+
+.status {
+  margin-top: 0.75rem;
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  color: #90caf9;
+}
+
+.results-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.result-section h3 {
+  margin-top: 0;
+}
+
+.badge {
+  background: #1e88e5;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #263238;
+  border-radius: 4px;
+  background: #151b24;
+}
+
+.list li {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid #263238;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #b0bec5;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #90a4ae;
+}
