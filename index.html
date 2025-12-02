@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Security Scanner - letsdrink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>JS Security Scanner</h1>
+    <p>Scan JavaScript for potential secrets, domains, URLs, and paths.</p>
+  </header>
+
+  <main class="main-container">
+    <section class="card">
+      <h2>Scan Options</h2>
+      <div class="scan-options">
+        <div class="scan-block">
+          <h3>Upload JS File</h3>
+          <input type="file" id="fileInput" accept=".js" />
+          <button class="button-primary" id="scanFileBtn">Scan File</button>
+        </div>
+        <div class="scan-block">
+          <h3>Scan JS by URL</h3>
+          <input type="url" id="urlInput" placeholder="https://example.com/app.js" />
+          <button class="button-primary" id="scanUrlBtn">Fetch &amp; Scan</button>
+          <p class="hint">Note: Some servers may block cross-origin (CORS) requests.</p>
+        </div>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <div class="results-header">
+        <button class="button-secondary" id="downloadJsonBtn">Download JSON</button>
+        <button class="button-secondary" id="downloadTextBtn">Download Text Report</button>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-section">
+          <h3>Potential Secrets <span id="secretsCount" class="badge">0</span></h3>
+          <ul id="secretsList" class="list"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>URLs <span id="urlsCount" class="badge">0</span></h3>
+          <ul id="urlsList" class="list"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>Domains <span id="domainsCount" class="badge">0</span></h3>
+          <ul id="domainsList" class="list"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>Paths <span id="pathsCount" class="badge">0</span></h3>
+          <ul id="pathsList" class="list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by client-side analysis. No code leaves your browser.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
